@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manikandan A O | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-brand">Manikandan A O</div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">🏡Home</a></li>
+        <li><a href="#about">🙎‍♂️About</a></li>
+        <li><a href="#projects">🖥️Projects</a></li>
+        <li><a href="#contact">📞Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="container">
+        <div class="profile-content">
+          <img
+            src="images\Manikandan.jpg"
+            alt="Profile Photo"
+            class="profile-image"
+          />
+          <h1>Hi, I'm <span class="highlight">Manikandan A O</span></h1>
+          <p class="tagline">Web Developer | UGC NET 2024 Qualified</p>
+          <br />
+          <div class="cta-buttons">
+            <a href="#projects" class="btn primary">View My Work</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a passionate web developer pursuing MCA from CUSAT. I have
+              experience in creating responsive and user-friendly websites. My
+              focus is on writing clean, elegant, and efficient code. In
+              addition to web development, I have a solid foundation in
+              programming languages and frameworks, enabling me to build
+              comprehensive solutions for various projects. I'm also working on
+              projects related to AI and deep learning, exploring innovative
+              ways to integrate technology into real-world applications.
+            </p>
+          </div>
+          <br />
+          <div class="resume">
+            <a
+              href="https://drive.google.com/file/d/1kzyE9qV3vvrk3az94Nu-oxLnxSW5zMWk/view?usp=drive_link"
+              class="btn"
+              target="_blank"
+            >
+              My Resume
+            </a>
+          </div>
+          <div class="skills">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <h4>HTML5</h4>
+                <div class="skill-level" data-level="80"></div>
+              </div>
+              <div class="skill-card">
+                <h4>CSS3</h4>
+                <div class="skill-level" data-level="75"></div>
+              </div>
+              <div class="skill-card">
+                <h4>JavaScript</h4>
+                <div class="skill-level" data-level="80"></div>
+              </div>
+              <div class="skill-card">
+                <h4>React</h4>
+                <div class="skill-level" data-level="75"></div>
+              </div>
+              <div class="skill-card">
+                <h4>C</h4>
+                <div class="skill-level" data-level="80"></div>
+              </div>
+              <div class="skill-card">
+                <h4>Python</h4>
+                <div class="skill-level" data-level="80"></div>
+              </div>
+              <div class="skill-card">
+                <h4>MySQL</h4>
+                <div class="skill-level" data-level="75"></div>
+              </div>
+              <div class="skill-card">
+                <h4>Java</h4>
+                <div class="skill-level" data-level="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // JavaScript to set skill levels
+      document.addEventListener("DOMContentLoaded", function () {
+        const skillLevels = document.querySelectorAll(".skill-level");
+
+        skillLevels.forEach((skill) => {
+          const level = skill.getAttribute("data-level");
+          skill.style.setProperty("--width", level + "%");
+        });
+      });
+    </script>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-content">
+              <h3>Aquavision : Underwater Image Enhancement</h3>
+              <p>
+                • Developing ”Aquavision,” a project utilizing deep learning
+                techniques to enhance underwater images.
+              </p>
+              <p>
+                • Building a web application to implement the model, enabling
+                real-time image enhancement use cases.
+              </p>
+              <div class="project-links"></div>
+            </div>
+
+            <div class="project-content">
+              <h3>A Note On Ideals</h3>
+              <p>
+                • Explored mathematical structures and their properties, with a
+                focus on ideals in algebra
+              </p>
+            </div>
+          </article>
+          <!-- More project cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <br />
+    <br />
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Modal for Project Details -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thank-you-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Thank You!</h2>
+        <p>Your message has been received.</p>
+        <div id="submission-details"></div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
